@@ -1,4 +1,8 @@
+enabled: true
+commitsOnly: true
+anyCommit: true
 titleOnly: true
+allowMergeCommits: true
 allowRevertCommits: true
 types:
   - feat
