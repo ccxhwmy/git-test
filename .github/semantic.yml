@@ -1,4 +1,4 @@
-enabled: true
+enabled: false
 commitsOnly: true
 anyCommit: true
 titleOnly: true
