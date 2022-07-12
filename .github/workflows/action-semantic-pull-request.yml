@@ -8,9 +8,10 @@ on:
       - synchronize
 
 jobs:
-  my_first_job:
+  main:
+    name: Validate PR title
+    runs-on: ubuntu-latest
     steps:
-      - name: Use local semantic pull request
-        uses: amannn/action-semantic-pull-request@v4
+      - uses: amannn/action-semantic-pull-request@v4
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
