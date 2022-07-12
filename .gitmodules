@@ -1,3 +1,6 @@
 [submodule "action-semantic-pull-request"]
 	path = action-semantic-pull-request
 	url = https://github.com/amannn/action-semantic-pull-request.git
+[submodule ".github/actions/semantic-pull-request"]
+	path = .github/actions/semantic-pull-request
+	url = https://github.com/amannn/action-semantic-pull-request.git
