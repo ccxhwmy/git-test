@@ -7,9 +7,10 @@ on:
       - edited
       - synchronize
 
-jobs:
-  main:
+  check:
     name: Validate PR title
     runs-on: ubuntu-latest
     steps:
+      - name: Checkout submodules
+        run: git submodule update --init --recursive
       - uses: ./action-semantic-pull-request
