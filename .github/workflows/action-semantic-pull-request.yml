@@ -11,6 +11,4 @@ on:
     name: Validate PR title
     runs-on: ubuntu-latest
     steps:
-      - uses: ./action-semantic-pull-request
-        with:
-          args: git submodule update --init --recursive
+      - uses: ./semantic-pull-request
