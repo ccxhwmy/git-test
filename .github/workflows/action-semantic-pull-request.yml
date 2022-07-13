@@ -12,6 +12,12 @@ jobs:
     name: Validate PR title
     runs-on: ubuntu-latest
     steps:
+      - name: pwd
+        run: pwd
+      - name: list file
+        run: ls -l ${{ github.workspace }}
+      - name: cat GITHUB_TOKEN
+        run: echo ${{ secrets.GITHUB_TOKEN }}
       - uses: ./semantic-pull-request
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
