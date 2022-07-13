@@ -13,5 +13,5 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: ccxhwmy/git-test/semantic-pull-request@main
-        with:
-          token: ${{ secrets.access-token }}
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
