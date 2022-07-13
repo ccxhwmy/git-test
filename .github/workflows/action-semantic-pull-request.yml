@@ -12,6 +12,8 @@ jobs:
     name: Validate PR title
     runs-on: ubuntu-latest
     steps:
+      - name: Check out repository code
+        uses: actions/checkout@v3
       - name: pwd
         run: pwd
       - name: list file
