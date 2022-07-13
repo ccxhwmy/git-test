@@ -7,8 +7,11 @@ on:
       - edited
       - synchronize
 
-  check:
+job:
+  main:
     name: Validate PR title
     runs-on: ubuntu-latest
     steps:
       - uses: ./semantic-pull-request
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
