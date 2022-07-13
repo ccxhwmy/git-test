@@ -14,12 +14,11 @@ jobs:
     steps:
       - name: Check out repository code
         uses: actions/checkout@v3
-      - name: pwd
-        run: pwd
-      - name: list file
-        run: ls -l ${{ github.workspace }}
-      - name: cat GITHUB_TOKEN
-        run: echo ${{ secrets.GITHUB_TOKEN }}
-      - uses: ./semantic-pull-request
+        with:
+          submodules: recursive
+      - name: List files in the repository
+        run: |
+          ls ${{ github.workspace }}
+      - uses: ./.github/actions/semantic-pull-request
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
