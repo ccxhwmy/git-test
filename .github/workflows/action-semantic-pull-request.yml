@@ -12,6 +12,6 @@ jobs:
     name: Validate PR title
     runs-on: ubuntu-latest
     steps:
-      - uses: ccxhwmy/git-test/semantic-pull-request@main
+      - uses: ./semantic-pull-request
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
