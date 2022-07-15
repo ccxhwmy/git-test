@@ -21,8 +21,8 @@ jobs:
           git clone --branch v4 https://github.com/amannn/action-semantic-pull-request.git ./test/semantic-pull-request
       - name: List files in the repository
         run: |
-          ls ${{ github.workspace }}
-      - uses: ./.github/actions/semantic-pull-request
+          ls ${{ github.workspace }}/test/semantic-pull-request
+      - uses: ./test/semantic-pull-request
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
