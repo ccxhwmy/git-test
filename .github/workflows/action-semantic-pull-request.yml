@@ -22,7 +22,7 @@ jobs:
       - name: List files in the repository
         run: |
           ls ${{ github.workspace }}/test/semantic-pull-request
-      - uses: ./test/semantic-pull-request
+      - uses: ./.github/actions/semantic-pull-request
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
