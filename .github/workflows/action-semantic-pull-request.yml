@@ -26,6 +26,7 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
+          headerPattern: (^Revert\s"([\s\S]*)"\s*This reverts commit (\w*)\.)|(^(\w*)(?:\(([\w$.\-*/ ]*)\))?: (.*)$)
           types: |
             feat
             fix
