@@ -39,5 +39,5 @@ jobs:
             chore
             revert
             change
-          headerPattern: (^Revert\s"([\s\S]*)"\s*This reverts commit (\w*)\.)|(^(\w*)(?:\(([\w$.\-*/ ]*)\))?: (.*)$)
+          headerPattern: '(^Revert\s"([\s\S]*)"\s*This reverts commit (\w*)\.)|(^(\w*)(?:\(([\w$.\-*/ ]*)\))?: (.*)$)'
           headerPatternCorrespondence: type, scope, subject
