@@ -16,14 +16,6 @@ jobs:
         uses: actions/checkout@v3
         with:
           submodules: recursive
-      - name: Clone repository code
-        run: |
-          git clone --branch v4 https://github.com/amannn/action-semantic-pull-request.git ./test/semantic-pull-request
-      - name: List files in the repository
-        run: |
-          ls ${{ github.workspace }}/test/semantic-pull-request
       - uses: ./.github/actions/semantic-pull-request
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        with:
-          headerPattern: '^Revert\s"([\s\S]*)"\s*This reverts commit (\w*)\.|^(\w*)(?:\(([\w$.\-*/ ]*)\))?: (.*)$'
